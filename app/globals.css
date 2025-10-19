@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== GLOBAL STYLES ========== */
+html, body {
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, #0E0E10 0%, #09090b 100%);
+  color: #fff;
+  font-family: 'Poppins', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ========== GLASS EFFECT ========== */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+/* ========== NEON GRADIENT TEXT ========== */
+.neon-text {
+  background: linear-gradient(90deg, #00FFF0, #A855F7, #00FFF0);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg font-semibold border transition;
+  border-color: rgba(0,255,240,0.4);
+  background: rgba(0,255,240,0.05);
+}
+.btn-primary:hover {
+  background: #00FFF0;
+  color: #000;
+  box-shadow: 0 0 20px #00FFF0;
+}
+
+.btn-outline {
+  @apply px-6 py-3 rounded-lg font-semibold border transition;
+  border-color: rgba(168,85,247,0.4);
+  background: rgba(168,85,247,0.05);
+}
+.btn-outline:hover {
+  background: #A855F7;
+  color: #000;
+  box-shadow: 0 0 20px #A855F7;
+}
+
+/* ========== GLOWING CIRCULAR PHOTO ========== */
+.glow-circle {
+  border: 2px solid rgba(0, 255, 240, 0.4);
+  box-shadow:
+    0 0 40px rgba(0, 255, 240, 0.3),
+    0 0 80px rgba(168, 85, 247, 0.25),
+    inset 0 0 25px rgba(0, 255, 240, 0.15);
+  animation: circleGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes circleGlow {
+  0% {
+    transform: translateY(0px) scale(1);
+    box-shadow:
+      0 0 25px rgba(0,255,240,0.3),
+      0 0 60px rgba(168,85,247,0.2),
+      inset 0 0 20px rgba(0,255,240,0.15);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+      0 0 60px rgba(0,255,240,0.5),
+      0 0 120px rgba(168,85,247,0.35),
+      inset 0 0 40px rgba(0,255,240,0.25);
+  }
+}
+/* Glowing hover effect for social icons */
+a:hover svg {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 240, 0.5));
+}
+
+/* Subtle floating animation for footer gradient */
+@keyframes floatPulse {
+  0% { transform: translateY(0) scale(1); opacity: 0.35; }
+  50% { transform: translateY(-10px) scale(1.05); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 0.35; }
+}
+
+footer {
+  animation: floatPulse 6s ease-in-out infinite;
+}
+/* Neon hover glow for icons */
+a:hover svg {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 240, 0.6));
+}
+
+/* Pulse gradient glow animation for footer */
+@keyframes footerPulse {
+  0% {
+    background: radial-gradient(circle at center, rgba(0,255,240,0.1), transparent 70%);
+  }
+  50% {
+    background: radial-gradient(circle at center, rgba(168,85,247,0.15), transparent 70%);
+  }
+  100% {
+    background: radial-gradient(circle at center, rgba(0,255,240,0.1), transparent 70%);
+  }
+}
+
+footer {
+  animation: footerPulse 6s ease-in-out infinite;
+}
+button.bg-cyan-500\/20 {
+  box-shadow: 0 0 12px rgba(0, 255, 240, 0.3);
+}
+
