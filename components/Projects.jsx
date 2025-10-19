@@ -17,6 +17,17 @@ export default function Projects() {
       link: "https://github.com/jayaschool1981-rgb/VybeRide-JavaFX",
       image: "/projects/VIBERIDE.jpg",
     },
+    {
+      title: "Accident Alert Server",
+      description:
+        "A real-time accident alert and emergency response server built using Node.js and Express. It processes IoT crash sensor data, triggers instant alerts via APIs, and integrates with SMS/GPS systems for faster emergency handling.",
+      link: "https://github.com/jayaschool1981-rgb/accident-alert-server",
+      image: "/projects/car-accident.jpeg",
+      tech: ["Node.js", "Express.js", "IoT", "API", "Emergency System"], // ✅ renamed
+    },
+
+
+
   ];
 
   return (
