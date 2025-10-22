@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="mt-10 flex gap-4 justify-center md:justify-start">
           <a href="#projects" className="btn-primary">View My Work</a>
           <a href="#contact" className="btn-outline">Hire Me</a>
-          <a href="/ombarvekarCV4.pdf" className="btn-primary" download>Download Resume</a>
+          <a href="/ombarvekarCV6.pdf" className="btn-primary" download>Download Resume</a>
         </div>
       </div>
 
