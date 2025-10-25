@@ -1,30 +1,31 @@
-import Education from "../components/Education";
+'use client';
 
-import Contact from "../components/Contact";
 import Hero from "../components/Hero";
+import About from "../components/about";   // ✅ Keep this (your expanded About section)
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-
-
-
+import Education from "../components/Education";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
     <>
+      {/* 🧠 Hero Section */}
       <Hero />
 
-      <section id="about" className="max-w-6xl mx-auto px-6 md:px-12 py-8">
-        <h2 className="text-2xl font-bold">About Me</h2>
-        <p className="mt-4 text-gray-300 max-w-3xl">
-          Hi, I’m Om Barvekar — I turn algorithms into experiences that improve
-          lives — from AI-driven accident detection to cloud-powered analytics.
-          My goal is to merge intelligence with empathy.
-        </p>
-      </section>
+      {/* 👇 Full About Me Section (from About.jsx) */}
+      <About />
 
+      {/* 💡 Skills Section */}
       <Skills />
+
+      {/* 🚀 Projects Section */}
       <Projects />
+
+      {/* 🎓 Education Section */}
       <Education />
+
+      {/* 📞 Contact Section */}
       <Contact />
     </>
   );
